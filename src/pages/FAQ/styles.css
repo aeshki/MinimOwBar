@@ -1,0 +1,30 @@
+.container[data-page='faq'] .content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container[data-page='faq'] .dropdown {
+    user-select: none;
+    position: relative;
+    background-color: var(--slate-300);
+    box-shadow: 5px 5px 0 0 var(--slate-400);
+    color: var(--slate-900);
+    font-weight: 500;
+    padding: 15px;
+    transition: .2s;
+}
+
+.container[data-page='faq'] .dropdown .items {
+    color: var(--slate-600);
+    overflow: hidden;
+    max-height: 0;
+    transition: .2s ease-out;
+}
+.container[data-page='faq'] .dropdown .items.open {
+    max-height: 100px;
+    transition: .2s ease-in;
+    margin-top: 5px;
+    padding-top: 8px;
+    border-top: 2px solid var(--slate-400);
+}

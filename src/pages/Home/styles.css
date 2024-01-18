@@ -1,0 +1,15 @@
+.container[data-page='home'] .content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 75px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container[data-page='home'] .content {
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,19 @@
+.container {
+    height: fit-content;
+    padding: 50px 75px;
+    background-color: var(--slate-200);
+    width: min(1200px, 100%);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 22px 42px;
+    }
+}
+
+/* MOBILE M */
+@media screen and (max-width: 375px) {
+    .container {
+        padding: 22px 32px;
+    } 
+}

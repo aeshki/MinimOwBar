@@ -1,0 +1,226 @@
+.container[data-page='contact'] .content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.container[data-page='contact'] .description {
+    padding-left: 8px;
+    border-left: 3px solid var(--slate-400);
+    color: var(--slate-600);
+    line-height: 1.5;
+}
+
+.container[data-page='contact'] .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.container[data-page='contact'] .links .coords {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container[data-page='contact'] .links .coords > * {
+    border-left: 3px solid var(--slate-400);
+    padding-left: 8px;
+}
+
+.container[data-page='contact'] .links .title {
+    color: var(--slate-800);
+    font-size: 21;
+    font-weight: 500;
+    display: flex;
+    gap: 5px;
+}
+
+.container[data-page='contact'] .links .link {
+    color: var(--slate-500);
+    font-weight: 600;
+}
+
+.container[data-page='contact'] .socials {
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+}
+
+.container[data-page='contact'] .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    transition: .2s;
+    background-color: var(--slate-300);
+    box-shadow: 5px 5px 0 0 var(--slate-500);
+}
+
+.container[data-page='contact'] .social[data-type='fb'] {
+    background-color: #7dd3fc;
+    box-shadow: 5px 5px 0 0 #0ea5e9;
+}
+
+.container[data-page='contact'] .social[data-type='ig'] {
+    background: linear-gradient(22deg, rgba(253,224,71,1) 0%, rgba(240,171,252,1) 35%, rgba(248,113,113,1) 65%, rgba(165,180,252,1) 100%);
+    box-shadow: 5px 5px 0 0 #ec4899;
+    
+}
+
+.container[data-page='contact'] .social img {
+    height: 64px;
+    width: 64px;
+}
+
+.container[data-page='contact'] .social:hover {
+    filter:saturate(1.2);
+}
+
+.container[data-page='contact'] .details {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.container[data-page='contact'] .form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: var(--slate-300);
+    box-shadow: 5px 5px 0 0 var(--slate-400);
+    width: 100%;
+    height: fit-content;
+}
+
+.container[data-page='contact'] .form .civility {
+    display: flex;
+    gap: 25px;
+}
+
+
+/* NOT HERE */
+.container[data-page='contact'] .field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--slate-900);
+    gap: 5px;
+    width: 100%;
+}
+
+.container[data-page='contact'] .form .civility .field {
+    width: min(150px, 100%);
+}
+
+.container[data-page='contact'] .field:has(:is(input, textarea):required)::after {
+    position: absolute;
+    content: '*';
+    right: 0px;
+    top: 0;
+    color: red;
+}
+
+.container[data-page='contact'] .field :is(input, textarea) {
+    background-color: var(--slate-100);
+    color: var(--slate-900);
+    border: none;
+    padding: 5px 12px;
+}
+
+.container[data-page='contact'] .field :is(input, textarea):focus {
+    outline: none;
+}
+
+.container[data-page='contact'] .btn {
+    padding: 15px;
+    margin-top: 15px;
+    background-color: var(--slate-200);
+    border: 2px solid var(--slate-900);
+    color: var(--slate-900);
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    justify-content: right;
+    align-self: flex-end;
+    width: fit-content;
+    transition: .4s;
+}
+
+.container[data-page='contact'] .btn:disabled {
+    color: var(--slate-300);
+    background-color: var(--slate-100);
+    border: 2px solid var(--slate-100);
+}
+
+
+.container[data-page='contact'] .btn:not(:disabled):hover {
+    color: var(--default);
+    background-color: var(--slate-900);
+}
+
+@media screen and (max-width: 860px) {
+    .container[data-page='contact'] .links {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container[data-page='contact'] .links .coords {
+        height: fit-content;
+    }
+
+    .container[data-page='contact'] .details {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container[data-page='contact'] .links {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .container[data-page='contact'] .socials {
+        flex-direction: column;
+    }
+
+    .container[data-page='contact'] .description {
+        font-size: 16px;
+    }
+
+    .container[data-page='contact'] .social img {
+        height: 48px;
+        width: 48px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container[data-page='contact'] .form .civility {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container[data-page='contact'] .form .civility .field {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .container[data-page='contact'] .links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container[data-page='contact'] .socials {
+        flex-direction: row;
+    }
+}

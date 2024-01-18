@@ -1,0 +1,36 @@
+.nav-button {
+    user-select: none;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+    transition: .2s;
+}
+
+.nav-button.active {
+    color: var(--slate-300);
+}
+
+.nav-button:not(.active):hover {
+    color: var(--slate-200);
+}
+
+.nav-button::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    height: 3px;
+    left: 0;
+    width: 0;
+    transition: .4s ease-out;
+}
+
+.nav-button.active::after {
+    width: 100%;
+    background-color: var(--slate-300);
+}
+
+.nav-button:not(.active):hover::after {
+    width: 100%;
+    background-color: var(--slate-200);
+}

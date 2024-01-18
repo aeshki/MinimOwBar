@@ -1,0 +1,22 @@
+input[type='date'] {
+    user-select: none;
+    padding: 5px;
+    border: none;
+    font-weight: 600;
+    color: var(--slate-800);
+    background-color: var(--slate-300);
+    box-shadow: 3px 3px 0 0 var(--slate-400);
+}
+
+input[type='date'] {
+    padding: 5px;
+    border: none;
+    font-weight: 600;
+    color: var(--slate-800);
+    background-color: var(--slate-300);
+    box-shadow: 3px 3px 0 0 var(--slate-400);
+}
+
+input[type='date']:focus {
+    outline: none;
+}

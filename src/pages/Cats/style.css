@@ -1,0 +1,129 @@
+.container[data-page='cats'] .content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container[data-page='cats'] .cat-box {
+    display: grid;
+    grid-template-areas: 
+    "img characteristic"
+    "img abouts";
+    align-items: start;
+    padding: 15px;
+    gap: 20px;
+    background-color: var(--slate-300);
+    box-shadow: 5px 5px 0 0 var(--slate-400);
+}
+
+.container[data-page='cats'] .cat-box img.cat {
+    grid-area: img;
+    width: 160px;
+    height: min-content;
+    border-radius: 15px;
+    box-shadow: 0 0 0 4px var(--slate-400);
+}
+
+.container[data-page='cats'] .cat-box .abouts {
+    grid-area: abouts;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--slate-200);
+    box-shadow: 0 0 0 4px var(--slate-400);
+    border-radius: 15px;
+    height: fit-content;
+}
+
+.container[data-page='cats'] .cat-box .abouts .title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--slate-900);
+}
+
+.container[data-page='cats'] .cat-box .description {
+    color: var(--slate-600);
+}
+
+.container[data-page='cats'] .cat-box .characteristic {
+    grid-area: characteristic;
+    height: fit-content;
+    display: flex;
+    align-self: flex-end;
+    justify-self: end;
+    gap: 15px;
+}
+
+
+.container[data-page='cats'] .cat-box .characteristic .lg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: var(--slate-200);
+    box-shadow: 5px 5px 0 0 var(--slate-400);
+    padding: 5px 10px;
+}
+
+.container[data-page='cats'] .cat-box .characteristic .lg img {
+    width: 32px;
+}
+
+@media screen and (max-width: 930px) {
+    .container[data-page='cats'] .cat-box {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 25% auto;
+        grid-template-areas: 
+        "img characteristic"
+        "abouts abouts";       
+    }
+
+    .container[data-page='cats'] .cat-box .characteristic .lg {
+        justify-content: start;
+        min-width: 100px;
+    }
+
+    .container[data-page='cats'] .cat-box .characteristic {
+        flex-direction: column;
+        align-self: normal;
+        min-width: 120px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .container[data-page='cats'] .cat-box {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container[data-page='cats'] .cat-box {
+        display: flex;
+    }
+
+    .container[data-page='cats'] .cat-box img.cat {
+        align-self: center;
+    }
+
+    .container[data-page='cats'] .cat-box .characteristic {
+        display: flex;
+        align-self: unset;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .container[data-page='cats'] .cat-box .abouts {
+        gap: 4px;
+    }
+
+    .container[data-page='cats'] .cat-box .abouts .title {
+        font-size: 21px;
+    }
+
+    .container[data-page='cats'] .cat-box .abouts .description {
+        font-size: 14px;
+    }
+}

@@ -52,10 +52,11 @@ export default function FAQ() {
     return (
       <div className='content'>
         {
-          QUESTIONS.map(question => (
+          QUESTIONS.map((question, idx) => (
             <Dropdown
               title={question.ask}
               description={question.answer}
+              key={idx}
             />
           ))
         }

@@ -1,4 +1,4 @@
-import './style.css'
+import './cats.styles.css';
 
 import {
   Boubou,

@@ -1,7 +1,8 @@
 import {
   Header,
-  Container
-} from '@layouts';
+  Container,
+  Footer
+} from '@/layouts';
 
 import './styles.css';
 export default function App() {
@@ -11,6 +12,8 @@ export default function App() {
       <main>
         <Container />
       </main>
+      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

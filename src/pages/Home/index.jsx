@@ -6,7 +6,7 @@ export default function Home() {
       {[
         {
           title: 'Qui sommes-nous ?',
-          paragraph: "Le Minim'Ow Bar est un « Neko Café » ou un « Bar à chats » au cœur de Toulouse où vous pouvez profiter d’une pause gourmande en compagnie des félins. Le lieu est spécialement aménagé pour votre bien-être et celui de nos chats. Les chats du salon, dont certains seront bientôt proposés à l’adoption, proviennent essentiellement de l'association l'École des chats libres de Toulouse. Le Minim'Ow Bar est situé dans la quartier des Minimes.",
+          paragraph: "Le Minim'Ow Bar est un « Neko Café » ou un « Bar à chats » au cœur de Toulouse où vous pouvez profiter d’une pause gourmande en compagnie des félins. Le lieu est spécialement aménagé pour votre bien-être et celui de nos chats. Les chats du salon, dont certains seront bientôt proposés à l’adoption, proviennent essentiellement de l'association l'École des chats libres de Toulouse. Le Minim'Ow Bar est situé dans le quartier des Minimes.",
         },
         {
           title: 'Réservation',

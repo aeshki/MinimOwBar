@@ -89,3 +89,7 @@ main {
         padding: 25px;
     }
 }
+
+@media screen and (width < 1024px) {
+    .noScroll { overflow: hidden; }
+}  

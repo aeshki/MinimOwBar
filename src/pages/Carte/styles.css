@@ -1,0 +1,76 @@
+.container[data-page='carte'] .content {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container[data-page='carte'] .img {
+    width: 75%;
+    background-color: var(--slate-300);
+    padding: 15px;
+    box-shadow: 5px 5px 0 0 var(--slate-400);
+}
+
+.container[data-page='carte'] .bts {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+}
+
+.container[data-page='carte'] .manage {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.container[data-page='carte'] .btn {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 6px 8px;
+    color: var(--slate-900);
+    border: 2px solid var(--slate-900);
+    background-color: var(--slate-300);
+    transition: .2s;
+}
+
+.container[data-page='carte'] .btn:hover {
+    background-color: var(--slate-900);
+    color: var(--slate-300);
+}
+
+.container[data-page='carte'] .btn:focus {
+    outline: none;
+}
+
+.container[data-page='carte'] .btn-dl {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 6px 8px;
+    color: #064e3b;
+    border: 2px solid #064e3b;
+    background-color: #6ee7b7;
+    transition: .2s;
+    width: fit-content;
+}
+
+.container[data-page='carte'] .btn-dl:hover {
+    background-color: #064e3b;
+    color: #6ee7b7;
+}
+
+.container[data-page='carte'] .pages {
+    color: var(--slate-900);
+}
+
+@media screen and (max-width: 320px) {
+    .container[data-page='carte'] .pages {
+        font-size: 14px;
+    }
+    
+    .container[data-page='carte'] .img {
+        width: 100%;
+    }
+}

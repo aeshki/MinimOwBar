@@ -7,7 +7,7 @@ import './styles.css';
 export default function Contact() {
     return (
       <div className='content'>
-        <p className='description'>Pour tout information complémentaire, n'hésitez à d'abord regarder la F.A.Q, si ce que vous rechercher n'y ai pas inscrit, je vous invite donc à prendre contact avec nous.</p>
+        <p className='description'>Pour toute information complémentaire et si vous n'avez pas trouvé votre bonheur dans notre FAQ, n'hésitez pas à prendre contact avec nous en remplissant le formulaire ci-dessous.</p>
         <div className='details'>
           <div className='links'>
             <div className='coords'>
@@ -24,7 +24,7 @@ export default function Contact() {
               <a data-type='ig' target='_blank' href='https://www.instagram.com/minimow_bar/' className='social'>
                 <img src={Instagram} alt='instagram logo' />
               </a>
-              <a data-type='fb' target='_blank' href='https://www.chapristea.com/contact' className='social'>
+              <a data-type='fb' target='_blank' href='https://www.facebook.com/MinimOwBar' className='social'>
                 <img src={Facebook} alt='facebook logo' />
               </a>
             </div>

@@ -37,9 +37,33 @@ header .menu {
     gap: 20px;
 }
 
-@media screen and (max-width: 930px) {
+/* BURGER */
+.burger {
+    display: none;
+    padding: 4px;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  margin: 5px;
+  background: var(--slate-200);
+  transition: 0.5s ease;
+}
+
+header :has(.menu.dropped) .burger span:nth-child(1) { transform: rotate(-45deg) translate(-5px,6px ); }
+header :has(.menu.dropped) .burger span:nth-child(2) { transform: scale(0); opacity: 0; }
+header :has(.menu.dropped) .burger span:nth-child(3) { transform: rotate(45deg) translate(-5px,-6px ); }
+
+
+.menu .dropped {
+    background-color: red;
+}
+
+@media screen and (max-width: 1030px) {
     header .title {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     header .menu {
@@ -47,9 +71,39 @@ header .menu {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 930px) {
+    header .title {
+        font-size: 22px;
+    }
+
     header .menu {
-        display: none
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .burger {
+        display: block;
+    }
+
+    nav .menu {
+        font-size: 21px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 90px;
+        right: -100%;
+        height: 100%;
+        width: 100%;
+        background-color: var(--slate-700);
+        z-index: 50;
+        transition: 0.5s ease-in-out;
+    }
+
+    nav .menu.dropped {
+        right: 0;
     }
 }
 
